@@ -32,5 +32,5 @@ while True:
     eth_header = packet[:eth_length]
     eth = unpack('!6s6sh', eth_header)
     eth_protocol = socket.ntohs(eth[2])
-    print ('Destination MAC : ' + eth_addr(packet [0:6]) + ' Source MAC :' + eth_addr(packet[6:12]) + ' Protocol : ' + str(eth_protocol))
+    print ('Destination MAC : ' + str ( eth_addr(packet [0:6]) ) + ' Source MAC :' + str( eth_addr(packet[6:12]) )+ ' Protocol : ' + str(eth_protocol))
 
